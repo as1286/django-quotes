@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Contribute a Quote</title>
+</head>
+<body>
+    <!-- Errors -->
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <p>Counter: {{counter}}</p>
+    <form action="{% url 'create_book' %}" method="post">
+        {% csrf_token %}
+        Quotes: <input type="text" name="title" />
+        Posted By: <input type="text" name="author" />
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

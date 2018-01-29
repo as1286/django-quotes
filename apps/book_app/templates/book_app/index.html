@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title></title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" media="screen" title="no title" charset="utf-8" />
+</head>
+<body>
+    <h1>Welcome, user!</h1>
+
+    <a href="{% url 'add_book' %}">Post Quote for the Day</a>
+</body>
+</html>
